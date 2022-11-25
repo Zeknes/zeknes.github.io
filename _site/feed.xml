@@ -5,8 +5,8 @@
     <description>这里是 github@eric0202 的个人博客, 相信美好, 探索更大的世界</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 25 Nov 2022 16:50:11 +0800</pubDate>
-    <lastBuildDate>Fri, 25 Nov 2022 16:50:11 +0800</lastBuildDate>
+    <pubDate>Fri, 25 Nov 2022 17:30:16 +0800</pubDate>
+    <lastBuildDate>Fri, 25 Nov 2022 17:30:16 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
@@ -61,7 +61,7 @@ pip &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;requirements.txt
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;./res/2022-07-29-migrate-pip-requirements-from-board-to-board/pips.png&quot; alt=&quot;pips&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/in-post/2022-07-29/pips.png&quot; alt=&quot;pips&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 29 Jul 2022 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2022/07/29/migrate-pip-requirements-from-board-to-board/</link>

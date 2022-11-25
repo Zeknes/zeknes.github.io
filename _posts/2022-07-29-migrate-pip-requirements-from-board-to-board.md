@@ -81,4 +81,4 @@ sudo pip install requirements.txt
 
 
 
-![pips](./res/2022-07-29-migrate-pip-requirements-from-board-to-board/pips.png)
+![pips](/img/in-post/2022-07-29/pips.png)
