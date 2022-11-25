@@ -1,3 +1,11 @@
 [
   
+    {
+      "title"    : "开发板之间批量复制安装pip依赖",
+      "subtitle" : "A simple tutorial for pip migration",
+      "tags"     : "Python, Pip, Linux, 开发板",
+      "url"      : "/2022/07/29/migrate-pip-requirements-from-board-to-board/",
+      "date"     : "2022-07-29 00:00:00 +0800"
+    } 
+  
 ]
