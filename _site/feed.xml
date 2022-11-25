@@ -5,8 +5,8 @@
     <description>这里是 github@eric0202 的个人博客, 相信美好, 探索更大的世界</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 25 Nov 2022 16:42:59 +0800</pubDate>
-    <lastBuildDate>Fri, 25 Nov 2022 16:42:59 +0800</lastBuildDate>
+    <pubDate>Fri, 25 Nov 2022 16:50:11 +0800</pubDate>
+    <lastBuildDate>Fri, 25 Nov 2022 16:50:11 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
@@ -17,21 +17,14 @@
 
 &lt;h2 id=&quot;步骤&quot;&gt;步骤&lt;/h2&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;h2 id=&quot;环境准备&quot;&gt;环境准备&lt;/h2&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;h4 id=&quot;1-环境准备&quot;&gt;1. 环境准备&lt;/h4&gt;
 
 &lt;p&gt;两个开发板最好环境相同, 比如同为 ubuntu 20.04, 如果不行, 至少保证cpu为同架构, 如两者都为arm 64. 用电脑pypi下载的不行, 因为电脑下载的通常为amd 64架构.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;h2 id=&quot;旧版操作&quot;&gt;旧版操作&lt;/h2&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;h4 id=&quot;2-旧版操作&quot;&gt;2. 旧版操作&lt;/h4&gt;
 
-&lt;h2 id=&quot;21-新建文件夹-生成配置文件&quot;&gt;2.1. 新建文件夹, 生成配置文件&lt;/h2&gt;
+&lt;h5 id=&quot;21-新建文件夹-生成配置文件&quot;&gt;2.1. 新建文件夹, 生成配置文件&lt;/h5&gt;
+
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 3
@@ -40,22 +33,21 @@
 pip freeze &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; requirements.txt
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;22-响应报错&quot;&gt;2.2. 响应报错&lt;/h2&gt;
+&lt;h5 id=&quot;22-响应报错&quot;&gt;2.2. 响应报错&lt;/h5&gt;
 
 &lt;p&gt;这个时候通常pip会报错有些依赖无法下载, 这是因为某些依赖是自带的之类的. 这种通常另一个板子也自带, requirements.txt文件删除这条就行了.&lt;/p&gt;
 
-&lt;h2 id=&quot;23-下载到本地&quot;&gt;2.3. 下载到本地&lt;/h2&gt;
+&lt;h5 id=&quot;23-下载到本地&quot;&gt;2.3. 下载到本地&lt;/h5&gt;
+
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;pip download &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt
 &lt;span class=&quot;nb&quot;&gt;sudo cp&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 复制到u盘之类的位置&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;新板操作&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&quot;3-新板操作&quot;&gt;3. 新板操作&lt;/h3&gt;
 
-&lt;p&gt;3.1. 直接u盘安装或者复制到板子安装&lt;/p&gt;
+&lt;h5 id=&quot;31-直接u盘安装或者复制到板子安装&quot;&gt;3.1. 直接u盘安装或者复制到板子安装&lt;/h5&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
@@ -63,15 +55,13 @@ pip freeze &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; requirements.tx
 pip &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--no-index&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--find-links&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;.&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt	
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;如果新板子有网络, 只需要pip名单&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2 id=&quot;4-如果新板子有网络-只需要pip名单&quot;&gt;4. 如果新板子有网络, 只需要pip名单&lt;/h2&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;requirements.txt
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/_includes/res/2022-07-29-migrate-pip-requirements-from-board-to-board/pips.png&quot; alt=&quot;pips&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./res/2022-07-29-migrate-pip-requirements-from-board-to-board/pips.png&quot; alt=&quot;pips&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 29 Jul 2022 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2022/07/29/migrate-pip-requirements-from-board-to-board/</link>
