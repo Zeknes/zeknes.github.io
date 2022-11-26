@@ -87,3 +87,11 @@ service-worker: true
 
 # MathJax rendering for layout:page (e.g. post preview)
 page-mathjax: false
+
+# Friends
+friends:
+  [
+    { title: "Eric", href: "https://eric0202.github.io" },
+    { title: "Zek", href: "https://zeknes.github.io" },
+    { title: "Hux", href: "https://github.com/Huxpro" },
+  ]
