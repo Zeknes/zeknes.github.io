@@ -7,6 +7,7 @@ header-style: text
 tags:
   - PyQt5
   - PySide6
+  - Python
   - UI
   - Qt
 ---
