@@ -70,7 +70,7 @@ https://www.cnblogs.com/itwangqiang/articles/14955828.html
 
 
 
-```Python
+```python
 from PyQt5.QtWidgets import QApplication, QPushButton, QMessageBox
 from PyQt5 import uic
 import os
