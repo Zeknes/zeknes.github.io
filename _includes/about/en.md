@@ -10,7 +10,7 @@ I am attracted to quite a lot of things, during my high school, I had been learn
 
 Also I've learned many programming languages, including `Java`, `C/C++`, `Python`, `JavaScript`, alongside other techs like `Linux`, `Css`, `Html`, `Android`, `miniprogram`, `qt`. 
 
-Once very luckily I got a chance to take part in `bytedance` 's Android training program. As I can recall, I hadn't been busier in any other time of my life , woke up and start working at a little bit over 7 am, stop at about 0 am. Because I got other tasks other than Bytedance's training, I was literally doing 2 full-time jobs. As the outcome of my consistent working , I got the third place in Android program and finished other tasks well. Then I setup my future course mainly towards `embedded Linux`, `C++`, and `Qt` while staying interested in other techs.
+Once very luckily I got a chance to take part in `bytedance` 's Android training program. As I can recall, I hadn't been busier in any other time of my life , wake up and start working at a little bit over 7 am, stop at about 0 am. Because I got other tasks other than Bytedance's training, I was literally doing 2 full-time jobs. As the outcome of my consistent working , I got the third place in Android program and finished other tasks well. Then I setup my future course mainly towards `embedded Linux`, `C++`, and `Qt` while staying interested in other techs.
 
 My internship was in `Kingtronics Group` Limited Inc ( XiaMen ) , as a Linux engineer, during that period, I've made a giant leap in upgrading my abilities in `Linux` and other aspects. My abilities in solving problems are well approved by my leader, it was a valuable period in my life.
 
