@@ -17,7 +17,7 @@ tags:
 
 
 
-做了这么久的Linux开发板, 各种连接方式都试过了, 从HDMI屏幕接键盘, ssh, telnet, 串口, adb, 这么长时间的经验总结 - 应用层开发最好用的还是ssh和adb
+做了这么久的`Linux开发板`, 各种连接方式都试过了, 从`HDMI`屏幕接键盘, `ssh`, `telnet`, `serial port` `串口`, `adb`, 这么长时间的经验总结 - 应用层开发最好用的还是`ssh`和`adb`
 
 
 
