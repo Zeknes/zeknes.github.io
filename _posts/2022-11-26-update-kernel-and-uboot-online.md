@@ -30,7 +30,7 @@ tags:
 
 deb 是 Debian Linux 的软件包格式，打包最关键的是在 `DEBIAN` 目录下创建一个 `control` 文件。首先创建 deb 工作目录，然后在 deb 目录中创建相应的目录和文件：
 
-```
+```shell
 mkdir deb
 cd deb
 mkdir firefly-firmware    # 创建 firefly-firmware 目录
@@ -48,7 +48,7 @@ mv ~/trust.img ~/deb/firefly-firmware/usr/share/uboot
 
 `control` 文件内容如下,用于记录软件标识，版本号，平台，依赖信息等数据。
 
-```
+```shell
 Package: firefly-firmware # 文件目录名
 Version: 1.0    # 版本号
 Architecture: arm64 # 架构
@@ -61,7 +61,7 @@ Descriptionon: This is a deb test
 
 `postinst` 文件内容如下,就是将需要更新的内核和 U-Boot 文件用 `dd` 命令写进对应分区的脚本：
 
-```
+```shell
 echo "-----------uboot updating------------"
 dd conv=fsync,notrunc if=/usr/share/uboot/uboot.img of=/dev/disk/by-partlabel/uboot
 
@@ -82,7 +82,7 @@ dd conv=fsync,notrunc if=/usr/share/kernel/boot.img of=/dev/disk/by-partlabel/bo
 
 以下是创建好的目录树：
 
-```
+```shell
 deb
 └── firefly-firmware
     ├── DEBIAN
@@ -99,7 +99,7 @@ deb
 
 进入 deb 目录，用 `dpkg` 命令生成 deb 包：
 
-```
+```shell
 dpkg -b firefly-firmware firefly-firmware_1.0_arm64.deb
 ```
 
@@ -111,19 +111,19 @@ dpkg -b firefly-firmware firefly-firmware_1.0_arm64.deb
 
 首先安装需要的包：
 
-```
+```shell
 sudo apt-get install reprepro gnupg
 ```
 
 然后用 GnuPG 工具生成一个 GPG 密匙，执行命令后请根据提示操作：
 
-```
+```shell
 gpg --gen-key
 ```
 
 执行 `sudo gpg --list-keys` 可以查看刚刚生成的密匙信息:
 
-```
+```shell
 sudo gpg --list-keys
 
 gpg: WARNING: unsafe ownership on homedir '/home/firefly/.gnupg'
@@ -141,7 +141,7 @@ sub   rsa3072 2019-05-31 [E] [有效至：2021-05-30]
 
 接下来创建包仓库，首先创建目录:
 
-```
+```shell
 cd /var/www
 mkdir apt   # 包仓库目录
 mkdir -p ./apt/incoming
@@ -151,13 +151,13 @@ mkdir -p ./apt/key
 
 把前面生成的密匙导出到仓库文件夹，请用户对应好自己创建的用户名和邮箱地址。
 
-```
+```shell
 gpg --armor --export firefly firefly@t-chip.com > /var/www/apt/key/deb.gpg.key
 ```
 
 在 `conf` 目录下创建 `distributions` 文件，其内容如下：
 
-```
+```shell
 Origin: Neg   # 你的名字
 Label: Mian     # 库的名字
 Suite: stable   # (stable 或 unstable)
@@ -171,38 +171,38 @@ SignWith: BCB65788541D632C057E696B8CBC526C05417B76  # 上面步骤中生成的 G
 
 建立仓库树：
 
-```
+```shell
 reprepro --ask-passphrase -Vb /var/www/apt export
 ```
 
 将第 2 步做好的 deb 包加入到仓库中：
 
-```
+```shell
 reprepro --ask-passphrase -Vb /var/www/apt includedeb bionic ~/deb/firefly-firmware_1.0_arm64.deb
 ```
 
 可以查看库中添加的文件：
 
-```
+```shell
 root@Desktop:~# reprepro -b /var/www/apt/ list bionic
 bionic|main|arm64: firefly-firmware 1.0
 ```
 
 你的包已经加入了仓库，如果要移除它的话采用如下命令:
 
-```
+```shell
 reprepro --ask-passphrase -Vb /var/www/apt remove bionic firefly-firmware
 ```
 
 安装 nginx 服务器：
 
-```
+```shell
 sudo apt-get install nginx
 ```
 
 修改nginx的配置文件 `/etc/nginx/sites-available/default` 为：
 
-```
+```shell
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -221,7 +221,7 @@ server {
 
 重启 nginx 服务器：
 
-```
+```shell
 sudo service nginx restart
 ```
 
@@ -231,7 +231,7 @@ sudo service nginx restart
 
 在客户端设备中，首先要添加本地包仓库的源，在目录 `/etc/apt/sources.list.d` 下添加一个新的配置文件 `bionic.list`，内容如下：
 
-```
+```shell
 deb http://192.168.31.106 bionic main
 ```
 
@@ -239,13 +239,13 @@ IP 地址是服务器地址, `bionic` 是仓库发布代码名， `main` 是组�
 
 从服务器中获取并添加 GPG 密匙：
 
-```
+```shell
 wget -O - http://192.168.31.106/key/deb.gpg.key | apt-key add -
 ```
 
 更新后即可安装自定义软件源里的 `firefly-firmware_1.0_arm64` 包：
 
-```
+```shell
 root@firefly:/home/firefly# apt-get update
 Hit:1 http://192.168.31.106 bionic InRelease
 Hit:2 http://wiki.t-firefly.com/firefly-rk3399-repo bionic InRelease
