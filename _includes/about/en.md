@@ -16,7 +16,7 @@ My internship was in `Kingtronics Group` Limited Inc ( XiaMen ) , as a Linux eng
 
 
 
-By now , through my dedication and consistence, I have programmed several meaningful apps, also have I created my website for [Personal Info](https://eric0202.github.io) , and website for [Personal Blog](https://zeknes.github.io) . I will upload my knowledges and works to my Personal Blog , hope they will be useful to you. In the future there will be more things to be done , goals to be realized. and finally , with a line from Xiaomi that I love -
+By now , through my dedication and consistence, I have programmed several meaningful apps, also have I created my website for [Personal Blog](https://zeknes.github.io) . I will upload my knowledges and works to my Personal Blog , hope they will be useful to you. In the future there will be more things to be done , goals to be realized. and finally , with a line from Xiaomi that I love -
 
 
 
