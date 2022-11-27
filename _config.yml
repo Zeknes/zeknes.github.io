@@ -91,7 +91,7 @@ page-mathjax: false
 # Friends
 friends:
   [
-    { title: "Eric", href: "https://eric0202.github.io" },
+    { title: "Eric", href: "https://github.com/eric0202" },
     { title: "Zek", href: "https://zeknes.github.io" },
     { title: "Hux", href: "https://github.com/Huxpro" },
   ]
