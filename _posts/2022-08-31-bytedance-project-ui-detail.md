@@ -73,7 +73,7 @@ tags:
 ​	图片主要有三种：
 
 ​	图标 - 简单的src加载实现
-```Java
+```java
 android:id="@+id/img_store" 
 ```
 
