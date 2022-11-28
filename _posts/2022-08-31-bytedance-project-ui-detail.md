@@ -81,7 +81,7 @@ android:id="@+id/img_store"
 
 ​	头像 - 通过`glide`加载`CropCircleWithBorderTransformation`参数，实现带白边圆形图片
 
-```Java
+```java
 RequestOptions options = RequestOptions.bitmapTransform(new CropCircleWithBorderTransformation(3, Color.WHITE));
     Glide.with(this).load(R.drawable.r_key).apply(options).into(binding.imgAvatar);
 ```
@@ -90,7 +90,7 @@ RequestOptions options = RequestOptions.bitmapTransform(new CropCircleWithBorder
 
 ​	背景图 - 通过`glide`加载`BlurTransformation`参数，实现高斯模糊 (后期觉得去掉模糊效果可能更适合展示，没有加上
 
-```Java
+```java
     RequestOptions options1 = RequestOptions.bitmapTransform(new BlurTransformation(50,1));
     Glide.with(requireContext()).load(UriUtil.convertUriToPath(getContext(),background)).apply(options1).into(binding.imgWall);
 ```
@@ -134,7 +134,7 @@ RequestOptions options = RequestOptions.bitmapTransform(new CropCircleWithBorder
 ​	具体流程如下：
 点击进入权限判断
 
-```Java
+```java
 // 更改背景图
    if (ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.READ_EXTERNAL_STORAGE)== PackageManager.PERMISSION_GRANTED){
 // Toast.makeText(getContext(),"permission-allowed",Toast.LENGTH_LONG).show();
@@ -146,7 +146,7 @@ RequestOptions options = RequestOptions.bitmapTransform(new CropCircleWithBorder
 ```
 
 如果获取权限则开始选择图片
-```Java
+```java
     ActivityResultLauncher<String> mGetContent = registerForActivityResult(new ActivityResultContracts.GetContent(),
     this::updateUser);
 ```
@@ -175,7 +175,7 @@ RequestOptions options = RequestOptions.bitmapTransform(new CropCircleWithBorder
 
 比较简单，使用了启动页比较常用的`lottie`，简洁的同时非常美观。
 
-```Java
+```java
 public class LottieActivity extends AppCompatActivity {
 
     LottieAnimationView lottieAnimationView;
@@ -206,7 +206,7 @@ public class LottieActivity extends AppCompatActivity {
 
 
 为了让界面看起来更好看，我加入了图片穿透到状态栏的显示，使进入软件时和向下滑动后都有更好看的显示效果，特别是向下滑动后不会存在单色状态栏和背景图接触的突兀感。
-```XML
+```xml
 <item name="windowActionBar">false</item>
 <item name="windowNoTitle">true</item>
 <item name="android:windowTranslucentStatus">true</item>
@@ -222,7 +222,7 @@ public class LottieActivity extends AppCompatActivity {
 
 添加个人介绍展开，三角按钮旋转，比较简单，就不叙述了。
 
-```Java
+```java
 @Override
 public void onClick(View view) {
     TextView tv = binding.tvInfo;
