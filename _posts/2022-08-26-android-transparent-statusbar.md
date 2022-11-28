@@ -15,7 +15,7 @@ tags:
 
 效果如图
 
-![我的主页](/img/in-post/2022-08-26/page-mine.jpg)
+![我的主页](/img/in-post/page-mine.jpg)
 
 
 
