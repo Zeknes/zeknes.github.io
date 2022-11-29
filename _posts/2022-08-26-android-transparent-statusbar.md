@@ -11,8 +11,6 @@ tags:
 
 
 
-## 目的
-
 效果如图
 
 ![我的主页](/img/in-post/page-mine.jpg)
