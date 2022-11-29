@@ -247,3 +247,7 @@ public void onClick(View view) {
 2. 与小组一起完成了团队协作，通过git/github 进行同步，有不同于个人写项目的体验
 
 3. 讲课老师认真有趣，收获了知识
+
+
+
+![certification](/img/in-post/bytedance-certification.jpg)
