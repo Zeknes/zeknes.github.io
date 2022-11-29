@@ -104,3 +104,33 @@ sudo cp wifi.desktop /usr/share/applications/
 https://github.com/eric0202/linux-router
 ```
 
+
+
+
+
+### 3. adb设置安卓代理
+
+
+
+```shell
+adb -s 27a6f798a9aba056 shell settings put global http_proxy 192.168.57.159:7890
+
+adb -s 27a6f798a9aba056 shell settings put global https_proxy 192.168.57.159:7890
+
+adb -s 27a6f798a9aba056 shell settings get global http_proxy
+
+# unset
+
+adb -s 27a6f798a9aba056 shell settings put global http_proxy :0
+```
+
+
+
+### 4. 安卓配置代理服务器
+
+
+
+```shell
+pure install 'every proxy'
+```
+
