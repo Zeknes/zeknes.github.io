@@ -28,19 +28,19 @@ tags:
 
 **1.1. 网络请求**
 
-采用Retrofit + RxJava + Gson 的技术栈.
+采用`Retrofit` + `RxJava` + `Gson` 的技术栈.
 
 **1.2. 数据库储存**
 
-采用Google的Room进行数据的持久化储存.
+采用Google的`Room`进行数据的持久化储存.
 
 **1.3. 图片加载**
 
-使用Glide图片加载框架对图片进行加载, 更有效的保证了列表滑动时的流畅, 以及自动对图片进行压缩, 缓存.
+使用`Glide`图片加载框架对图片进行加载, 更有效的保证了列表滑动时的流畅, 以及自动对图片进行压缩, 缓存.
 
 **1.4. 开发语言**
 
-使用Java语言进行开发.
+使用`Java`语言进行开发.
 
 
 
@@ -50,7 +50,7 @@ tags:
 
 **2.1. 项目框架**
 
-mvvm
+`mvvm`
 
 **2.2. 设计模式**
 
@@ -82,19 +82,19 @@ mvvm
 
 **1. 网络请求**
 
-- 网络请求采用RxJava + Retrofit.
+- 网络请求采用`RxJava` + `Retrofit`.
 
 **2. 数据库存储**
 
-- 使用谷歌推荐的Room数据库框架 (Rxjava + Room).
+- 使用谷歌推荐的`Room数据库`框架 (`Rxjava` + `Room`).
 
 **3. 项目框架**
 
-- 采用MVVM框架.
+- 采用`MVVM`框架.
 
 **4. 团队协同**
 
-- 使用Github进行协同开发.
+- 使用`Github`进行协同开发.
 
 **5. 其他要求**
 
@@ -111,9 +111,9 @@ mvvm
 
 ##### 1. 架构
 
-采用MVVM的框架, 借鉴了谷歌推荐的应用架构指南.
+采用`MVVM`的框架, 借鉴了谷歌推荐的应用架构指南.
 
-分为两层: 界面层和数据层, ui布局和数据之间通过ViewModel建立关系, 同时ViewModel是属于界面层, 引用谷歌的一张图片如下. 对于数据层, 主要为数据仓库, 数据仓库负责统一调度网络请求仓库和数据库仓库, 以便在网络请求失败的情况下可以使用数据库的缓存.
+分为两层: 界面层和数据层, `ui`布局和数据之间通过`ViewModel`建立关系, 同时`ViewModel`是属于界面层, 引用谷歌的一张图片如下. 对于数据层, 主要为数据仓库, 数据仓库负责统一调度网络请求仓库和数据库仓库, 以便在网络请求失败的情况下可以使用数据库的缓存.
 
 
 
@@ -127,21 +127,21 @@ mvvm
 
 代码目录结构如下图所示
 
-- douyinapi
+- **douyinapi**
 
-  与抖音SDK有关的类, 如请求授权和授权回调Activity.
+  与抖音`SDK`有关的类, 如请求授权和授权回调Activity.
 
-- logic
+- **logic**
 
-  - database
+  - `database`
 
     数据库文件夹, 主要为实体类, DAO接口, 数据库类, 数据转换器.
 
-  - dataSource
+  - `dataSource`
 
     数据对外暴露的接口, 定义了需对外暴露的方法.
 
-  - factory
+  - `factory`
 
     存放工厂类.
 
@@ -149,21 +149,21 @@ mvvm
 
     与网络请求有关的类, 如作为回调的实体类对象, 网络请求接口, 自定义错误处理.
 
-  - repository
+  - `repository`
 
     存放数据仓库, 用于调度网络请求与数据库储存, 实现dataSource接口.
 
-- ui
+- **ui**
 
-  存放与界面层有关的类, 如ViewModel, Activity, Fragment, Adapter等.
+  存放与界面层有关的类, 如`ViewModel,` `Activity`, `Fragment`, `Adapter`等.
 
-- util
+- **util**
 
   工具类.
 
-- widget
+- **widget**
 
-  自定义view等.
+  自定义`view`等.
 
 
 
@@ -173,7 +173,7 @@ mvvm
 
 ##### 2. 网络请求
 
-网络请求方面, 通过RxJava的特性对Retrofit进行了一些封装, 对请求结果进行错误验证.
+网络请求方面, 通过`RxJava`的特性对`Retrofit`进行了一些封装, 对请求结果进行错误验证.
 
 ```java
 public abstract class DouYinBaseData {
@@ -270,7 +270,7 @@ public class DouYinResponse<T extends DouYinBaseData> {
 
 ##### 3. 数据请求
 
-采用MVVM的框架, 遵循谷歌推荐的方式, 划分界面层和数据层, 两者之间通过ViewModel连接, 数据层由数据仓库( Repository ) 来负责, 数据仓库根据请求成功与否来决定使用网络请求的数据还是数据库中缓存的数据, 即由数据仓库来调度数据库与网络请求模块.
+采用`MVVM`的框架, 遵循谷歌推荐的方式, 划分`界面层`和`数据层`, 两者之间通过`ViewModel`连接, 数据层由数据仓库( `Repository` ) 来负责, 数据仓库根据请求成功与否来决定使用网络请求的数据还是数据库中缓存的数据, 即由数据仓库来调度数据库与网络请求模块.
 
 
 
@@ -350,7 +350,7 @@ public class RankItemRepository implements RankItemDataSource {
 
 ##### 4. 加载
 
-因为基本每个列表都需要用到 "加载更多" 的功能, 因此封装了一个特殊的adaptor, 可以添加顶部Header以及底部Footer, 默认内置了底部Footer, 并外放方法可以设置Footer处于"正在加载中" 还是"没有更多了" 的状态.
+因为基本每个列表都需要用到 "加载更多" 的功能, 因此封装了一个特殊的`adaptor`, 可以添加顶部`Header`以及底部`Footer`, 默认内置了底部`Footer,` 并外放方法可以设置`Footer`处于"`正在加载中`" 还是"`没有更多了`" 的状态.
 
 ```java
 public class ExtendAdapter {
@@ -481,7 +481,7 @@ public class FooterAdapter extends RecyclerView.Adapter<FooterAdapter.FooterHold
 
 ##### 5. 视频播放
 
-对于个人视频播放详情页, 采用webview控件, 并动态注入js代码来隐藏一些不重要的元素以及实现进入自动播放的功能.
+对于个人视频播放详情页, 采用`webview`控件, 并动态注入`JavaScript`代码来隐藏一些不重要的元素以及实现进入自动播放的功能.
 
 ```java
 public class MyWebViewClient extends WebViewClient {
@@ -610,8 +610,14 @@ public class MyWebViewClient extends WebViewClient {
 
 1. 目前仍存在的问题
    1. 处于私密状态的视频播放不了, 应该隐藏此类视频或者在播放的时候提示"不可播放"
-   2. 视频播放使用的是 webview, 可以通过一些自定义配置提高 webview的性能及体验
+   2. 视频播放使用的是 `webview`, 可以通过一些自定义配置提高 `webview`的性能及体验
 2. 已识别的优化项目
-   1. 目前几乎每个列表都需要加载更多的功能, 可以提取重复功能, 二次封装RecyclerView
+   1. 目前几乎每个列表都需要加载更多的功能, 可以提取重复功能, 二次封装`RecyclerView`
 3. 架构演进的可能性
    1. 分离架构 -> 服务化架构
+
+
+
+
+
+![](/img/in-post/bytedance-certification.jpg)
