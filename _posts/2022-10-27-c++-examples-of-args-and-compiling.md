@@ -94,9 +94,12 @@ clean :
 
 ## 3. No pass 
 
-```c++
+```shell
 # vim /etc/ssh/ssh_config   
 StrictHostKeyChecking no
+```
+
+```c++
 #include <cstdlib>
 #include <string.h>
 #include <stdlib.h>
