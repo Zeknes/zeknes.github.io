@@ -38,10 +38,9 @@ tags:
 
 <html>
 
-<video width="280" height="400" controls>
+<video width="300" height="700" controls>
     <source src="/img/in-post/bytedance-app-video-demo.mp4" type="video/mp4">
 </video>
-
 </html>
 
 
