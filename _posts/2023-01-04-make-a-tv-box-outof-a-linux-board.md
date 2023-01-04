@@ -23,7 +23,7 @@ tags:
 
 
 
-开发版默认是xfce4, 用于4k显示和播放视频都很吃力. 首先要换为 gnome桌面.
+开发版默认是`xfce4` , 用于4k显示和播放视频都很吃力. 首先要换为 `gnome`桌面.
 
 
 
@@ -54,7 +54,7 @@ cd /etc/lightdm/lightdm.conf.d/
 pacmd list-sinks
 ```
 
-选择name, 如:
+选择`name`, 如:
 
 ```shell
 name: <alsa_output.platform-hdmi0-sound.HDMI__hw_rockchiphdmi0__sink>
