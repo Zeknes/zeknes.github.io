@@ -6,6 +6,8 @@ author: "Eric"
 header-style: text
 tags:
   - Linux
+  - 交叉编译
+  - 虚拟化
   - qemu
   - ubuntu
 ---
