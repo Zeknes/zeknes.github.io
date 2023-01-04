@@ -54,7 +54,7 @@ qemu-img create ubuntu22.04-arm64.qcow2 25G
 
 
 ```shell
-qemu-system-aarch64 -m 2048 -cpu cortex-a57 -smp 2 -M virt -bios QEMU_EFI.fd -no
+qemu-system-aarch64 -m 4096 -cpu cortex-a57 -smp 6 -M virt -bios QEMU_EFI.fd -no
 graphic -drive if=none,file=ubuntu-arm64.iso,id=cdrom,media=cdrom -device virtio-s
 csi-device -device scsi-cd,drive=cdrom -drive if=none,file=ubuntu.qcow2,id=hd0 -
 device virtio-blk-device,drive=hd0
