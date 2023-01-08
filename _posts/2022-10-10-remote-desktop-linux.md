@@ -54,7 +54,7 @@ PermitRootLogin yes
 以`xfce`为例
 
 ```shell
-echo xfce4-session >~/.xsession 
+echo xfce4-session > ~/.xsession 
 以及在  vi /etc/X11/Xsession 
 首行添加 xfce4-session
 ```
@@ -70,9 +70,20 @@ echo xfce4-session >~/.xsession
 vnc几乎只适用于调试, 没有usb重定向, 画面质量也很低, 但是方便网页登陆.
 
 ```shell
-sudo apt isntall tigervnc* -y
+sudo apt install tigervnc-standalone-server tigervnc-common -y
 
-vncserver :n
+vncserver :1 -localhost no
+```
+
+
+
+在vnc配置想要启动的桌面
+
+```shell
+vim .vnc/xstartup
+
+#!/bin/sh
+gnome-session
 ```
 
 
