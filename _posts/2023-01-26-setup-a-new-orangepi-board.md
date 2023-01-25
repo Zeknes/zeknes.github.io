@@ -56,7 +56,7 @@ sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia
 sudo apt update
 sudo apt upgrade -y
 
-sudo apt install -y i3 smplayer chromium-browser vlc fish rofi feh
+sudo apt install -y i3 xserver-xorg xorg smplayer chromium-browser vlc fish rofi feh
 
 sudo apt dist-upgrade
 ```
