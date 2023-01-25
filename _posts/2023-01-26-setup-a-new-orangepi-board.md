@@ -56,7 +56,7 @@ sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia
 sudo apt update
 sudo apt upgrade -y
 
-sudo apt install -y i3 smplayer chromium-browser vlc fish rofi
+sudo apt install -y i3 smplayer chromium-browser vlc fish rofi feh
 
 sudo apt dist-upgrade
 ```
@@ -69,13 +69,70 @@ sudo apt dist-upgrade
 
 
 
-#### 1. 总体配置
+#### 1. 配置总体dpi
 
-总体配置的详细方式过于麻烦, 用之前的文件复制进去就行了.
+```shell
+echo "Xft.dpi:450" > ~/.Xresources
+```
 
 
 
-#### 2. 配置启动x服务器和开机服务
+#### 2. 配置feh
+
+```shell
+echo "eh --no-fehbg --bg-scale '/home/orangepi/Pictures/wall1.jpg' &" > ~/.config/.fehbg
+
+sudo chmod +x ~/.config/.fehbg
+
+echo "exec_always --no-startup-id ~/.fehbg &" >> ~/.config/i3/config
+```
+
+
+
+#### 3. 配置rofi
+
+安装`theme`
+
+```shell
+cd ~/Downloads
+git clone https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme.git
+cd Tokyo-Night-GTK-Theme/
+mv themes/Tokyonight-Dark-BL /usr/share/themes/
+```
+
+
+
+在`i3`中配置
+
+```shell
+vim ~/.config/i3/config
+
+bindsym $mod+d exec --no-startup-id rofi -show drun -font "pango:monospace 32"
+```
+
+
+
+复制配置文件
+
+```shell
+cp -r rofi/* ~/
+```
+
+
+
+#### 4. 配置fish
+
+复制配置文件
+
+```shell
+cp -r fish/* ~/
+```
+
+
+
+
+
+## 4. 配置启动x服务器和开机服务
 
 
 
@@ -112,7 +169,7 @@ vim ~/.profile
 
 
 
-## 4. 配置wayland
+## 5. 配置wayland
 
 
 
