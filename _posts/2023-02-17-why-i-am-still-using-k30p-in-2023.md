@@ -73,7 +73,7 @@ K30 Pro最显著的优点可以说就是这块屏幕, 然而, 成也萧何败也
 
 
 
-![](//img/in-post/magisk-refresh.png)
+![](/img/in-post/magisk-refresh.png)
 
 
 
