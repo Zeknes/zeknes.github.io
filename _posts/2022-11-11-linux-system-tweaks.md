@@ -182,6 +182,10 @@ sudo visudo
 %sudo   ALL=(ALL:ALL) NOPASSWD: ALL
 ```
 
+```shell
+echo "%sudo ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/nopasswd
+```
+
 
 
 ### 6. 默认启动模式
