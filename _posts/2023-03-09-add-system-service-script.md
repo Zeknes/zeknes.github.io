@@ -45,9 +45,13 @@ x写了一个自动添加系统服务的脚本, 以后添加服务就方便了�
 #!/usr/bin/env python3
 
 import os
+import sys
 
-# Prompt the user to input a filename
-filename = input("Enter a filename: ")
+# Get the filename from the command-line arguments or prompt the user to enter one
+if len(sys.argv) > 1:
+    filename = sys.argv[1]
+else:
+    filename = input("Enter a filename: ")
 
 # Get the full path to the file
 if filename.startswith('/'):
@@ -56,6 +60,8 @@ if filename.startswith('/'):
 else:
     # If the filename does not start with '/', use the current working directory to get the full path
     script = os.path.abspath(filename)
+
+print(f"Input file is : {filename}")
 
 # Extract the filename from the path
 service_name = os.path.basename(script)
@@ -80,7 +86,7 @@ User=root
 WantedBy=multi-user.target"""
 
 # Write the service file to disk
-with open(f"{service_name}.service", "w") as f:
+with open(f"/etc/systemd/system/{service_name}.service", "w") as f:
     f.write(service_file)
 
 # Use the systemctl command to start the service
@@ -90,5 +96,4 @@ os.system(f"systemctl start {service_name}.service")
 print(f"Systemd service for {service_name} has been created and started!")
 
 ```
-
 
