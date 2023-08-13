@@ -25,7 +25,7 @@ Ubuntu23.04升级kernel之后直接挂逼了，我以为要重装丢数据了，
 
 在终端中运行以下命令，以列出已安装的所有内核版本：
 
-```bash
+```shell
 dpkg --list | grep linux-image
 ```
 
@@ -35,40 +35,40 @@ dpkg --list | grep linux-image
 
 ##### 2.卸载内核：
 
-   使用以下命令卸载特定的内核版本，将 `<kernel_version>` 替换为你要卸载的内核版本号：
+使用以下命令卸载特定的内核版本，将 `<kernel_version>` 替换为你要卸载的内核版本号：
 
-   ```bash
+   ```shell
    sudo apt-get remove linux-image-<kernel_version>
    ```
 
-   例如：
+例如：
 
-   ```bash
+   ```shell
    sudo apt-get remove linux-image-6.2.0-27-generic
    ```
 
-   这将卸载指定的内核版本。
+这将卸载指定的内核版本。
 
 
 
 ##### 3.更新GRUB引导：
 
-   在卸载内核后，你需要更新GRUB引导配置，以确保引导菜单正确显示。运行以下命令：
+在卸载内核后，你需要更新GRUB引导配置，以确保引导菜单正确显示。运行以下命令：
 
-   ```bash
+   ```shell
    sudo update-grub
    ```
 
-   这会更新GRUB引导并移除已卸载内核的引导选项。
+这会更新GRUB引导并移除已卸载内核的引导选项。
 
 
 
 ##### 4.清理不再使用的内核包：
 
-   运行以下命令以删除已卸载内核的相关文件和依赖项：
+运行以下命令以删除已卸载内核的相关文件和依赖项：
 
-   ```bash
+   ```shell
    sudo apt-get autoremove
    ```
 
-   这将自动清理不再使用的内核文件和依赖项。
+这将自动清理不再使用的内核文件和依赖项。
