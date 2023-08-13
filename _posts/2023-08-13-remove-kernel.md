@@ -1,13 +1,12 @@
 ---
 layout: post
 title: "卸载多个kernel中的其中一个"
-subtitle: "Enable lid function on laptop"
+subtitle: "Remove an extra kernel"
 author: "Eric"
 header-style: text
 tags:
-  - laptop
+  - Ubuntu
   - Linux
-  - python
 ---
 
 
