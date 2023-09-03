@@ -22,25 +22,31 @@ tags:
 
 
 
-#### pip设置清华源
+##### pip设置清华源
 
 ```bash
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-#### 查看模块位置
+
+
+##### 查看模块位置
 
 ```bash
 pip show PySide6
 ```
 
-默认pyside designer软链接
+
+
+##### 默认pyside designer软链接
 
 ```bash
 sudo ln -s ~/.local/lib/python3.10/site-packages/PySide6/designer /usr/bin/designer
 ```
 
-#### 全局使用一个模块
+
+
+##### 全局使用一个模块
 
 以pyinstaller为例
 
@@ -48,7 +54,9 @@ sudo ln -s ~/.local/lib/python3.10/site-packages/PySide6/designer /usr/bin/desig
 sudo pip install -U pyinstaller
 ```
 
-#### pyinstaller编译
+
+
+##### pyinstaller编译
 
 ```bash
 pyinstaller -F main.py
@@ -63,7 +71,9 @@ sys.setrecursionlimit(100000)
 
 ## 2. Python
 
-#### Python启动参数自带库
+
+
+##### Python启动参数自带库
 
 ```python
 #!/usr/bin/python3
@@ -90,7 +100,9 @@ if __name__ == '__main__':
         print(e)
 ```
 
-Python启动参数click注解
+
+
+##### Python启动参数click注解
 
 ```python
 #!/usr/bin/python3
@@ -108,14 +120,23 @@ def test_for_sys(year, name, body):
 
 if __name__ == '__main__':
     test_for_sys()
-~
+```
+
+
+
+##### Python从上一级目录引入包
+
+```python
+import sys
+sys.path.insert(0, sys.path[0]+"/../")
+from config.env import *
 ```
 
 
 
 ## 3. 一个Python执行ssh配置文件的例子
 
-#### 配置文件ini
+##### 配置文件ini
 
 ```python
 [ssh]
@@ -125,7 +146,7 @@ username=user
 password=password
 ```
 
-#### python代码
+##### python代码
 
 ```python
 # -*- coding: utf-8 -*-

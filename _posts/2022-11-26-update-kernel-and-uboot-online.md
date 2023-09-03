@@ -24,7 +24,7 @@ tags:
 
 
 
-## 1. 准备 deb 安装包
+### 1. 准备 deb 安装包
 
 操作中需要升级内核和 U-Boot，事先已经准备好了修改好的相关文件：`uboot.img` 、`trust.img` 、`boot.img` 。
 
@@ -107,7 +107,7 @@ dpkg -b firefly-firmware firefly-firmware_1.0_arm64.deb
 
 
 
-## 2. 创建本地仓库
+### 2. 创建本地仓库
 
 首先安装需要的包：
 
@@ -227,7 +227,7 @@ sudo service nginx restart
 
 
 
-## 3. 客户端更新安装
+### 3. 客户端更新安装
 
 在客户端设备中，首先要添加本地包仓库的源，在目录 `/etc/apt/sources.list.d` 下添加一个新的配置文件 `bionic.list`，内容如下：
 
