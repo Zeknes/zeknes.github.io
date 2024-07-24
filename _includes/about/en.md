@@ -20,4 +20,4 @@ By now , through my dedication and consistence, I have programmed several meanin
 
 
 
-> **Be always hopeful, the good things are about to happen.**
+> **Stay hopeful, good things are about to happen.**
